@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>My Orders</h2>
+
+{% for order in orders %}
+
+<div style="border:1px solid #ccc;padding:10px;margin:10px">
+
+<h3>Order ID: {{ order.id }}</h3>
+
+<p>Date: {{ order.created_at }}</p>
+
+</div>
+
+{% empty %}
+
+<p>No orders yet</p>
+
+{% endfor %}
+
+{% endblock %}
